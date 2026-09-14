@@ -20,6 +20,8 @@ public class App
 //       items.add(item);
         items.add(new OrderItem("C100",5));
         items.add(new OrderItem("c101",7));
+//        items.add(new OrderItem("C102",-5)); // Throws IllegalArgumentException: Quantity must be greater than zero
+//        items.add(new OrderItem("",5)); // Throws IllegalArgumentException: Product ID is required
 
         Order order = new Order("U01", items);
         items.clear();
@@ -35,5 +37,14 @@ public class App
         for (OrderItem item: order.getItems()) {
             System.out.println(item.getProductId());
         }
+
+        order.confirm();
+        order.confirm();
+        order.cancel();
+        System.out.println(order.getStatus());
+
+//        List<OrderItem> item2 = new ArrayList<>();
+//        Order order2 = new Order("C102",item2); // throws IllegalArgumentException: Order must contain at least one item
+//        System.out.println(order2);
     }
 }

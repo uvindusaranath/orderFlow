@@ -5,6 +5,17 @@ public class OrderItem {
     private int quantity;
 
 public OrderItem(String productId, int quantity) {
+
+    if (productId == null | productId.isBlank()) {
+        throw  new IllegalArgumentException(
+                "Product ID is required"
+        );
+    }
+    if (quantity <= 0) {
+        throw new IllegalArgumentException(
+                "Quantity must be greater than zero"
+        ); // fail-fast behavior
+    }
     this.productId = productId;
     this.quantity = quantity;
 }
