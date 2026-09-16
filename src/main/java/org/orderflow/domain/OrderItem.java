@@ -6,7 +6,7 @@ public class OrderItem {
 
 public OrderItem(String productId, int quantity) {
 
-    if (productId == null | productId.isBlank()) {
+    if (productId == null || productId.isBlank()) {
         throw  new IllegalArgumentException(
                 "Product ID is required"
         );

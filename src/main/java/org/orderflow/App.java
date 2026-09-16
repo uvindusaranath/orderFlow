@@ -1,7 +1,9 @@
 package org.orderflow;
 
+import org.orderflow.application.port.InventoryClient;
 import org.orderflow.domain.Order;
 import org.orderflow.domain.OrderItem;
+import org.orderflow.infrastructure.inventory.FakeInventoryClient;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -39,12 +41,15 @@ public class App
         }
 
         order.confirm();
-        order.confirm();
+//        order.confirm(); // throws InvalidOrderStateException: Only CREATED orders can be confirmed
         order.cancel();
         System.out.println(order.getStatus());
 
 //        List<OrderItem> item2 = new ArrayList<>();
 //        Order order2 = new Order("C102",item2); // throws IllegalArgumentException: Order must contain at least one item
 //        System.out.println(order2);
+
+        InventoryClient client = new FakeInventoryClient(true);
+        System.out.println(client.isAvailable("c101",67));
     }
 }

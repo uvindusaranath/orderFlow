@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee4ca603-a1cc-4ab2-a291-cba9ab64921f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/orderflow/domain/InvalidOrderStateException.java" afterDir="false" />
+    <list default="true" id="ee4ca603-a1cc-4ab2-a291-cba9ab64921f" name="Changes" comment="session 04">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/orderflow/application/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/orderflow/application/port/InventoryClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/orderflow/application/port/OrderRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/orderflow/infrastructure/inventory/FakeInventoryClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/orderflow/infrastructure/persistence/InMemoryOrderRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/orderflow/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/orderflow/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/orderflow/domain/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/orderflow/domain/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/orderflow/domain/InvalidOrderStateException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/orderflow/domain/InvalidOrderStateException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/orderflow/domain/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/orderflow/domain/OrderItem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +24,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -50,6 +54,11 @@
     "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\SDET_COURSE\OFlow\orderFlow\src\main\java\org\orderflow\application\" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -59,6 +68,15 @@
       <option name="presentableId" value="Default" />
       <updated>1789287980823</updated>
     </task>
+    <task id="LOCAL-00001" summary="session 04">
+      <option name="closed" value="true" />
+      <created>1789398538506</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1789398538506</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -71,5 +89,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="session 04" />
+    <option name="LAST_COMMIT_MESSAGE" value="session 04" />
   </component>
 </project>
