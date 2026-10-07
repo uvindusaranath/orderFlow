@@ -7,6 +7,7 @@ import org.orderflow.domain.Order;
 public class OrderService {
     private final InventoryClient inventoryClient;
     // OrderService HAS / USES an InventoryClient
+   // OrderService is composed with: InventoryClient & OrderRepository - It does not create them itself
     private final OrderRepository orderRepository;
 
     public OrderService(InventoryClient inventoryClient, OrderRepository orderRepository) {

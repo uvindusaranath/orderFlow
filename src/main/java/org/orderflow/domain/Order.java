@@ -8,7 +8,7 @@ public class Order {
  private final List<OrderItem> items;
 
     //final here means the items field reference cannot later be reassigned to another List object.
-    private OrderStatus status;
+private OrderStatus status;
  public Order(String customerId, List<OrderItem> items) {
      if (items == null || items.isEmpty()) {
          throw  new IllegalArgumentException("Order must contain at least one item");

@@ -1,9 +1,12 @@
 package org.orderflow;
 
+import org.orderflow.application.OrderService;
 import org.orderflow.application.port.InventoryClient;
+import org.orderflow.application.port.OrderRepository;
 import org.orderflow.domain.Order;
 import org.orderflow.domain.OrderItem;
 import org.orderflow.infrastructure.inventory.FakeInventoryClient;
+import org.orderflow.infrastructure.persistence.InMemoryOrderRepository;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -51,5 +54,16 @@ public class App
 
         InventoryClient client = new FakeInventoryClient(true);
         System.out.println(client.isAvailable("c101",67));
+
+        List<OrderItem> items1 = new ArrayList<>();
+        items1.add(new OrderItem("c1",34));
+        items1.add(new OrderItem("c2",70));
+
+        Order order1 = new Order("c43",items1);
+        OrderRepository repository = new InMemoryOrderRepository();
+        OrderService orderService = new OrderService(client,repository);
+        orderService.process(order1);
+//        orderService.process(order);
+        System.out.println(repository.findAll());
     }
 }
