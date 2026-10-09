@@ -3,7 +3,9 @@ package org.orderflow.application;
 import org.orderflow.application.port.InventoryClient;
 import org.orderflow.application.port.OrderRepository;
 import org.orderflow.domain.Order;
+import org.springframework.stereotype.Service;
 
+@Service
 public class OrderService {
     private final InventoryClient inventoryClient;
     // OrderService HAS / USES an InventoryClient
