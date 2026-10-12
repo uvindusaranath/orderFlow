@@ -17,7 +17,7 @@ public class OrderService {
         this.orderRepository = orderRepository;
     }
 
-    public Order process(Order order) {
+    public Order createOrder(Order order) {
         boolean allAvailable = true;
 
         for (var item: order.getItems()) {

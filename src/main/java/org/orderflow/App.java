@@ -8,7 +8,6 @@ import org.orderflow.domain.OrderItem;
 import org.orderflow.infrastructure.inventory.FakeInventoryClient;
 import org.orderflow.infrastructure.persistence.InMemoryOrderRepository;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -62,7 +61,7 @@ public class App
         Order order1 = new Order("c43",items1);
         OrderRepository repository = new InMemoryOrderRepository();
         OrderService orderService = new OrderService(client,repository);
-        orderService.process(order1);
+        orderService.createOrder(order1);
 //        orderService.process(order);
         System.out.println(repository.findAll());
     }
